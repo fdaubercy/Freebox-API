@@ -58,7 +58,19 @@ python -m pytest tests/
 
 Modifiez `config.json` pour ajuster les paramètres de configuration.
 
-## Fonctionnalités
+## Versions du script
+✅ v1.1.2
+- Graphiques temps réel : débit, Wi-Fi, DHCP
+- Historique 24h / 7j à partir des fichiers JSON
+- Endpoint /metrics compatible Prometheus
+- Possibilité HTTPS via Flask ou reverse proxy Nginx
+- Intégration complète avec alertes et cooldown existants
+
+- Ajout d'un script: 'run_freebox.bat':
+    * Active l’environnement virtuel .venv
+    * Installe les dépendances si elles ne sont pas déjà installées
+    * Lance freebox_dashboard_app.py avec WebSocket
+
 ✅ v1.1.1
 - Alertes débit & WiFi configurables
 - Anti-spam automatique
@@ -96,6 +108,15 @@ Modifiez `config.json` pour ajuster les paramètres de configuration.
 - Pas besoin de boucle while True pour chaque tâche, la planification est intégrée.
 - Compatible Flask : tu peux lancer start_scheduler() dans freebox_dashboard_app.py pour avoir les polls en parallèle avec ton dashboard.
 - Facile à étendre : tu peux ajouter des tâches pour /downloads, /calls, /storage etc.
+- Page web dédiée au paramétrage
+- Accessible depuis le dashboard via un bouton type menu
+- Permet de modifier :
+    Activation/désactivation des alertes
+    Cooldown alertes
+    Seuils débit minimum et Wi-Fi
+    Modifications persistées dans config.json
+- Protégé par JWT / login
+- Simple à étendre pour d’autres paramètres si besoin
 
 ## Licence
 

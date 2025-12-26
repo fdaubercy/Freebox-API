@@ -174,6 +174,76 @@ def category(name):
     data = r.json()
     return render_template("category.html", title=name.capitalize(), data=data)
 
+from datetime import datetime, timedelta
+
+@app.route("/history/<datatype>")
+@jwt_required
+def history(datatype):
+    period = request.args.get("period", "24h")
+    file_path = os.path.join(DATA_DIR, f"data_{datatype}.json")
+    if not os.path.exists(file_path):
+        return {"error":"no data"}, 404
+
+    now = datetime.now()
+    if period=="24h":
+        cutoff = now - timedelta(hours=24)
+    elif period=="7d":
+        cutoff = now - timedelta(days=7)
+    else:
+        cutoff = now - timedelta(hours=24)
+
+    history_data = []
+    with open(file_path,"r") as f:
+        for line in f:
+            entry = json.loads(line)
+            ts = datetime.fromtimestamp(entry["ts"])
+            if ts >= cutoff:
+                history_data.append(entry)
+    return {"data": history_data}
+
+@app.route("/metrics")
+def prometheus_metrics():
+    def safe_count(file):
+        try:
+            with open(file,"r") as f:
+                return sum(1 for _ in f)
+        except:
+            return 0
+
+    metrics = ""
+    metrics += f"# HELP freebox_dhcp_clients Nombre de clients DHCP actifs\n"
+    metrics += f"# TYPE freebox_dhcp_clients gauge\n"
+    metrics += f"freebox_dhcp_clients {safe_count(os.path.join(DATA_DIR,'data_dhcp.json'))}\n"
+
+    metrics += f"# HELP freebox_wifi_clients Nombre de clients WiFi\n"
+    metrics += f"# TYPE freebox_wifi_clients gauge\n"
+    metrics += f"freebox_wifi_clients {safe_count(os.path.join(DATA_DIR,'data_wifi.json'))}\n"
+
+    return metrics, 200, {"Content-Type":"text/plain; version=0.0.4"}
+
+@app.route("/settings")
+@jwt_required
+def settings():
+    return render_template("settings.html", config=CONFIG)
+
+@app.route("/save_settings", methods=["POST"])
+@jwt_required
+def save_settings():
+    # Alertes activées
+    CONFIG["alerts"]["enabled"] = "alerts_enabled" in request.form
+    CONFIG["alerts"]["cooldown_seconds"] = int(request.form.get("cooldown_seconds", 300))
+
+    # Seuils
+    CONFIG["alerts"]["thresholds"]["download_min_mbps"] = float(request.form.get("download_min_mbps", 5))
+    CONFIG["alerts"]["thresholds"]["upload_min_mbps"] = float(request.form.get("upload_min_mbps", 1))
+    CONFIG["alerts"]["thresholds"]["wifi_enabled_required"] = "wifi_enabled_required" in request.form
+
+    # Sauvegarder dans config.json
+    with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+        json.dump(CONFIG, f, indent=4)
+
+    return redirect(url_for("settings"))
+
 # ---------------- Scheduler & Data ----------------
 def save_data(name, data):
     path = os.path.join(DATA_DIR, f"data_{name}.json")
@@ -218,7 +288,11 @@ def poll_dhcp():
     try:
         r = requests.get(f"{API_BASE}/dhcp/config/", headers=freebox.headers(), timeout=5)
         r.raise_for_status()
-        save_data("dhcp", r.json())
+        data = r.json()
+        save_data("dhcp", data)
+        # Nombre de clients DHCP actifs
+        clients = len(data["result"].get("leases", []))
+        socketio.emit("dhcp_stats", {"timestamp": int(time.time()), "clients": clients})
         logger.info("Poll DHCP OK")
     except Exception as e:
         logger.error(f"poll_dhcp error: {e}")
@@ -267,5 +341,7 @@ def ws_connect():
     logger.info('Client WebSocket connecté')
 
 # ---------------- Run ----------------
+# Connexion HTTP
 if __name__ == "__main__":
     socketio.run(app, host="0.0.0.0", port=CONFIG.get("web_port", 5000))
+

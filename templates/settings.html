@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Paramètres Freebox App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>⚙️ Paramètres de l'application</h1>
+
+        <form method="POST" action="{{ url_for('save_settings') }}">
+            <h2>Alertes</h2>
+            <label>
+                Activer alertes: 
+                <input type="checkbox" name="alerts_enabled" {% if config.alerts.enabled %}checked{% endif %}>
+            </label><br><br>
+
+            <label>
+                Cooldown alertes (s): 
+                <input type="number" name="cooldown_seconds" value="{{ config.alerts.cooldown_seconds }}">
+            </label><br><br>
+
+            <h2>Seuils alertes</h2>
+            <label>
+                Débit min download (Mbps): 
+                <input type="number" name="download_min_mbps" value="{{ config.alerts.thresholds.download_min_mbps }}">
+            </label><br><br>
+            <label>
+                Débit min upload (Mbps): 
+                <input type="number" name="upload_min_mbps" value="{{ config.alerts.thresholds.upload_min_mbps }}">
+            </label><br><br>
+            <label>
+                WiFi activé requis: 
+                <input type="checkbox" name="wifi_enabled_required" {% if config.alerts.thresholds.wifi_enabled_required %}checked{% endif %}>
+            </label><br><br>
+
+            <input type="submit" value="Enregistrer">
+        </form>
+
+        <a href="{{ url_for('dashboard') }}">⬅️ Retour Dashboard</a>
+    </body>
+</html>

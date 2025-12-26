@@ -46,6 +46,11 @@
     <body>
         <h1>📡 Freebox Dashboard</h1>
 
+        <!-- =================== BOUTON MENU PARAMETRES =================== -->
+        <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+            <button id="menuBtn" style="font-size:24px;">☰</button>
+        </div>
+
         <!-- =================== BOUTONS =================== -->
         <div class="buttons">
             {% for name, url, icon in buttons %}
@@ -67,7 +72,17 @@
             <canvas id="wifiChart" height="100"></canvas>
         </div>
 
+        <!-- =================== GRAPHIQUE DHCP =================== -->
+        <div class="charts">
+            <h2>🖧 Clients DHCP actifs</h2>
+            <canvas id="dhcpChart" height="100"></canvas>
+        </div>
+
         <script>
+            document.getElementById("menuBtn").addEventListener("click", () => {
+                window.location.href = "{{ url_for('settings') }}";
+            });
+
             /* =================== CHART DEBIT =================== */
             const ctx = document.getElementById("speedChart").getContext("2d");
             const speedChart = new Chart(ctx, {
@@ -93,20 +108,16 @@
             const wifiCtx = document.getElementById("wifiChart").getContext("2d");
             const wifiChart = new Chart(wifiCtx, {
                 type: "line",
-                data: {
-                    labels: [],
-                    datasets: [
-                        { label: "Clients Wi-Fi", data: [], borderColor: "#4caf50", backgroundColor: "rgba(76,175,80,0.15)", tension: 0.3 }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { labels: { color: "white" } } },
-                    scales: {
-                        x: { ticks: { color: "white" }, grid: { color: "#333" } },
-                        y: { ticks: { color: "white" }, grid: { color: "#333" }, beginAtZero: true }
-                    }
-                }
+                data: { labels: [], datasets: [{ label: "Clients Wi-Fi", data: [], borderColor: "#4caf50", backgroundColor: "rgba(76,175,80,0.15)", tension: 0.3 }] },
+                options: { responsive:true, plugins:{legend:{labels:{color:"white"}}}, scales:{x:{ticks:{color:"white"},grid:{color:"#333"}}, y:{ticks:{color:"white"},grid:{color:"#333"},beginAtZero:true}} }
+            });
+
+            /* =================== CHART DHCP =================== */
+            const dhcpCtx = document.getElementById("dhcpChart").getContext("2d");
+            const dhcpChart = new Chart(dhcpCtx, {
+                type: "line",
+                data: { labels: [], datasets: [{ label: "Clients DHCP", data: [], borderColor: "#ff5722", backgroundColor: "rgba(255,87,34,0.15)", tension: 0.3 }] },
+                options: { responsive:true, plugins:{legend:{labels:{color:"white"}}}, scales:{x:{ticks:{color:"white"},grid:{color:"#333"}}, y:{ticks:{color:"white"},grid:{color:"#333"},beginAtZero:true}} }
             });
 
             /* =================== WEBSOCKET =================== */
@@ -115,31 +126,42 @@
             socket.on("connect", () => { console.log("🟢 WebSocket connecté"); });
 
             socket.on("realtime", msg => {
-                if(msg.type === "status") {
-                    const down = msg.data.result.rate_down / 1_000_000;
-                    const up = msg.data.result.rate_up / 1_000_000;
+                if(msg.type==="status"){
+                    const down = msg.data.result.rate_down/1_000_000;
+                    const up = msg.data.result.rate_up/1_000_000;
                     const time = new Date().toLocaleTimeString();
                     speedChart.data.labels.push(time);
                     speedChart.data.datasets[0].data.push(down);
                     speedChart.data.datasets[1].data.push(up);
-                    if(speedChart.data.labels.length > 30) {
+                    if(speedChart.data.labels.length>30){
                         speedChart.data.labels.shift();
-                        speedChart.data.datasets.forEach(ds => ds.data.shift());
+                        speedChart.data.datasets.forEach(ds=>ds.data.shift());
                     }
                     speedChart.update();
                 }
             });
 
-            socket.on("wifi_stats", msg => {
-                const time = new Date().toLocaleTimeString();
+            socket.on("wifi_stats", msg=>{
+                const time = new Date(msg.timestamp*1000).toLocaleTimeString();
                 wifiChart.data.labels.push(time);
                 wifiChart.data.datasets[0].data.push(msg.clients);
-                if(wifiChart.data.labels.length > 30) {
+                if(wifiChart.data.labels.length>30){
                     wifiChart.data.labels.shift();
                     wifiChart.data.datasets[0].data.shift();
                 }
                 wifiChart.update();
             });
+
+            socket.on("dhcp_stats", msg=>{
+                const time = new Date(msg.timestamp*1000).toLocaleTimeString();
+                dhcpChart.data.labels.push(time);
+                dhcpChart.data.datasets[0].data.push(msg.clients);
+                if(dhcpChart.data.labels.length>30){
+                    dhcpChart.data.labels.shift();
+                    dhcpChart.data.datasets[0].data.shift();
+                }
+                dhcpChart.update();
+            });
         </script>
-        </body>
+    </body>
 </html>
