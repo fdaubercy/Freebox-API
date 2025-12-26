@@ -6,16 +6,13 @@
     </head>
     <body>
         <h2>Connexion réussie ✅</h2>
-
         <table>
             <tr><th>Utilisateur</th><th>Token</th></tr>
             <tr><td>{{ user }}</td><td style="word-break:break-all">{{ token }}</td></tr>
         </table>
-
         <p>Redirection vers le dashboard...</p>
-
-        <script>
-            setTimeout(() => window.location="/dashboard", 3000);
-        </script>
+        
+        <script>setTimeout(() => window.location="/dashboard", 3000);</script>
     </body>
 </html>
+

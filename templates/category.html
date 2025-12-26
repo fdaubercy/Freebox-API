@@ -6,21 +6,10 @@
     </head>
     <body>
         <h2>{{ title }}</h2>
-        <div id='json' style="display:none;">{{ jsonString }}</div>
-
         <table>
-            <tr>
-                {% for k in data["result"].keys() %}
-                <th>{{ k }}</th>
-                {% endfor %}
-            </tr>
-            <tr>
-                {% for v in data["result"].values() %}
-                <td>{{ v | tojson }}</td>
-                {% endfor %}
-            </tr>
+            <tr>{% for k in data.keys() %}<th>{{ k }}</th>{% endfor %}</tr>
+            <tr>{% for v in data.values() %}<td>{{ v | tojson }}</td>{% endfor %}</tr>
         </table>
-
         <button onclick="window.location='/dashboard'">⬅ Retour</button>
     </body>
 </html>

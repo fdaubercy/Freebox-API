@@ -58,6 +58,20 @@ python -m pytest tests/
 
 Modifiez `config.json` pour ajuster les paramètres de configuration.
 
+## Fonctionnalités
+✅ v1.0
+- Le scheduler APScheduler poll l’API Freebox toutes les 30s/5min
+- Les réponses sont stockées dans des fichiers JSON (data_status.json, data_wifi,json, data_dhcp.json)
+- Les pages HTML sont externes, modifiables à chaud
+- Dashboard et catégories fonctionnent avec icônes et tableaux centrés
+
+
+✅ Points forts
+- APScheduler exécute les tâches en arrière-plan.
+- Pas besoin de boucle while True pour chaque tâche, la planification est intégrée.
+- Compatible Flask : tu peux lancer start_scheduler() dans freebox_dashboard_app.py pour avoir les polls en parallèle avec ton dashboard.
+- Facile à étendre : tu peux ajouter des tâches pour /downloads, /calls, /storage etc.
+
 ## Licence
 
 Ce projet est sous licence MIT.
