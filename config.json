@@ -1,9 +1,33 @@
-{
-  "freebox_url": "http://mafreebox.freebox.fr",
-  "api_version": "v15",
-  "app_id": "fr.freebox.webapp",
-  "jwt_secret": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJleHAiOjE3NjY2OTQ3NTd9.kwjfn89YgyuNFiCEcvwy7NIlpxWatxB02gg0AqTqQg4",
-  "jwt_exp": 3600,
-  "local_user": "admin",
-  "local_password": "admin"
+{ 
+    "freebox_url": "http://mafreebox.freebox.fr", 
+    "api_version": "v15", 
+    "app_id": "fr.freebox.webapp", 
+    "jwt_secret": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJleHAiOjE3NjY2OTQ3NTd9.kwjfn89YgyuNFiCEcvwy7NIlpxWatxB02gg0AqTqQg4", 
+    "jwt_exp": 3600, 
+    "web_port": 5000,
+    "local_user": "admin", 
+    "local_password": "admin",
+    "alerts": {
+        "enabled": true,
+        "cooldown_seconds": 300,
+        "thresholds": {
+            "download_min_mbps": 5,
+            "upload_min_mbps": 1,
+            "wifi_enabled_required": true
+        },
+        "mail": { 
+            "enabled": false,
+            "from": "fdaubercy@gmail.com", 
+            "to": ["fdaubercy@gmail.com"], 
+            "server": "smtp.free.fr", 
+            "port": 587,
+            "username": "fdaubercy",
+            "password": "Lune5676",
+            "tls": true
+        },
+        "discord": {
+            "enabled": false,
+            "webhook": "https://discord.com/api/webhooks/TON_WEBHOOK"
+        }
+    }
 }

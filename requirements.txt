@@ -1,4 +1,6 @@
 flask
+flask-socketio
+eventlet
 requests
-PyJWT
-pytest
+pyjwt
+apscheduler

@@ -482,3 +482,380 @@ KeyError: 'expires'
 2025-12-26 08:21:28,795 [INFO] [33mPress CTRL+C to quit[0m
 2025-12-26 08:21:33,998 [INFO] Session Freebox ouverte
 2025-12-26 08:21:34,091 [INFO] 192.168.0.3 - - [26/Dec/2025 08:21:34] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-26 10:14:47,474 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:14:47,475 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:14:47,476 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:14:47,480 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 10:14:47,481 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 10:14:47,483 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 10:14:47,483 [INFO] Scheduler started
+2025-12-26 10:14:47,486 [INFO] Scheduler Freebox démarré
+2025-12-26 10:19:42,196 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:19:42,197 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:19:42,197 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:19:42,200 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 10:19:42,201 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 10:19:42,201 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 10:19:42,202 [INFO] Scheduler started
+2025-12-26 10:19:42,204 [INFO] Scheduler Freebox démarré
+2025-12-26 10:20:12,210 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:20:12 CET)" (scheduled at 2025-12-26 10:20:12.196153+01:00)
+2025-12-26 10:20:12,316 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:20:12,620 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49760>: Client host rejected: Access denied')}
+2025-12-26 10:20:14,464 [ERROR] Exception on /category/filesystem [GET]
+Traceback (most recent call last):
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fdaub\Documents\Github\Freebox-API\freebox_dashboard_app.py", line 80, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\fdaub\Documents\Github\Freebox-API\freebox_dashboard_app.py", line 130, in category
+    r = requests.get(url, headers=freebox.headers())
+                                  ^^^^^^^^^^^^^^^^^
+  File "c:\Users\fdaub\Documents\Github\Freebox-API\freebox_dashboard_app.py", line 60, in headers
+    self._open()
+  File "c:\Users\fdaub\Documents\Github\Freebox-API\freebox_dashboard_app.py", line 53, in _open
+    pwd = requests.hmac.new(self.app_token.encode(), challenge.encode(), digestmod="sha1").hexdigest()
+          ^^^^^^^^^^^^^
+AttributeError: module 'requests' has no attribute 'hmac'
+2025-12-26 10:20:14,530 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:20:14,576 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:20:42 CET)" executed successfully
+2025-12-26 10:20:42,197 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:21:12 CET)" (scheduled at 2025-12-26 10:20:42.196153+01:00)
+2025-12-26 10:20:42,295 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:20:42,499 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49772>: Client host rejected: Access denied')}
+2025-12-26 10:20:44,250 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:20:44,251 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:21:12 CET)" executed successfully
+2025-12-26 10:21:12,202 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:21:42 CET)" (scheduled at 2025-12-26 10:21:12.196153+01:00)
+2025-12-26 10:21:12,233 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:21:12,313 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49779>: Client host rejected: Access denied')}
+2025-12-26 10:21:13,912 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:21:13,912 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:21:42 CET)" executed successfully
+2025-12-26 10:21:42,207 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:22:12 CET)" (scheduled at 2025-12-26 10:21:42.196153+01:00)
+2025-12-26 10:21:42,642 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:21:42,820 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49788>: Client host rejected: Access denied')}
+2025-12-26 10:21:44,466 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:21:44,467 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:22:12 CET)" executed successfully
+2025-12-26 10:22:12,206 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:22:42 CET)" (scheduled at 2025-12-26 10:22:12.196153+01:00)
+2025-12-26 10:22:12,249 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:22:12,374 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49795>: Client host rejected: Access denied')}
+2025-12-26 10:22:13,699 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:22:13,700 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:22:42 CET)" executed successfully
+2025-12-26 10:22:42,198 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:23:12 CET)" (scheduled at 2025-12-26 10:22:42.196153+01:00)
+2025-12-26 10:22:42,324 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:22:42,431 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49808>: Client host rejected: Access denied')}
+2025-12-26 10:22:43,730 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:22:43,761 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:23:12 CET)" executed successfully
+2025-12-26 10:23:12,200 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:23:42 CET)" (scheduled at 2025-12-26 10:23:12.196153+01:00)
+2025-12-26 10:23:12,234 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:23:12,321 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49818>: Client host rejected: Access denied')}
+2025-12-26 10:23:14,909 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:23:14,912 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:23:42 CET)" executed successfully
+2025-12-26 10:23:42,201 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:24:12 CET)" (scheduled at 2025-12-26 10:23:42.196153+01:00)
+2025-12-26 10:23:42,304 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:23:42,457 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49833>: Client host rejected: Access denied')}
+2025-12-26 10:23:44,295 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:23:44,300 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:24:12 CET)" executed successfully
+2025-12-26 10:24:12,202 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:24:42 CET)" (scheduled at 2025-12-26 10:24:12.196153+01:00)
+2025-12-26 10:24:12,402 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:12,533 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49845>: Client host rejected: Access denied')}
+2025-12-26 10:24:14,097 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:14,100 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:24:42 CET)" executed successfully
+2025-12-26 10:24:42,203 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:25:12 CET)" (scheduled at 2025-12-26 10:24:42.196153+01:00)
+2025-12-26 10:24:42,204 [INFO] Running job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 10:24:42 CET)" (scheduled at 2025-12-26 10:24:42.196153+01:00)
+2025-12-26 10:24:42,205 [INFO] Running job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 10:24:42 CET)" (scheduled at 2025-12-26 10:24:42.197154+01:00)
+2025-12-26 10:24:42,393 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:42,393 [ERROR] Erreur poll_dhcp: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:42,393 [ERROR] Erreur poll_wifi: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:42,639 [ERROR] Erreur envoi mail: (421, b'4.7.0 smtp4-g21.free.fr Error: too many connections from 2a01:e0a:814:6890:c059:e077:54e3:facd')
+2025-12-26 10:24:42,889 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49859>: Client host rejected: Access denied')}
+2025-12-26 10:24:42,935 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49858>: Client host rejected: Access denied')}
+2025-12-26 10:24:46,155 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:46,164 [INFO] Alert sent via Discord: DHCP poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:46,164 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:25:12 CET)" executed successfully
+2025-12-26 10:24:46,167 [INFO] Alert sent via Discord: WiFi poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:24:46,167 [INFO] Job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 10:29:42 CET)" executed successfully
+2025-12-26 10:24:46,170 [INFO] Job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 10:29:42 CET)" executed successfully
+2025-12-26 10:25:12,200 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:25:42 CET)" (scheduled at 2025-12-26 10:25:12.196153+01:00)
+2025-12-26 10:25:12,647 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:25:12,911 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49872>: Client host rejected: Access denied')}
+2025-12-26 10:25:14,353 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:25:14,371 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:25:42 CET)" executed successfully
+2025-12-26 10:25:42,209 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:26:12 CET)" (scheduled at 2025-12-26 10:25:42.196153+01:00)
+2025-12-26 10:25:42,688 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:25:43,277 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49887>: Client host rejected: Access denied')}
+2025-12-26 10:25:46,126 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:25:46,129 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:26:12 CET)" executed successfully
+2025-12-26 10:26:12,206 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:26:42 CET)" (scheduled at 2025-12-26 10:26:12.196153+01:00)
+2025-12-26 10:26:12,359 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:26:12,534 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49896>: Client host rejected: Access denied')}
+2025-12-26 10:26:14,118 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:26:14,136 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:26:42 CET)" executed successfully
+2025-12-26 10:26:42,212 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:27:12 CET)" (scheduled at 2025-12-26 10:26:42.196153+01:00)
+2025-12-26 10:26:42,334 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:26:42,456 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49903>: Client host rejected: Access denied')}
+2025-12-26 10:26:44,738 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:26:44,739 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:27:12 CET)" executed successfully
+2025-12-26 10:27:12,208 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:27:42 CET)" (scheduled at 2025-12-26 10:27:12.196153+01:00)
+2025-12-26 10:27:12,473 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:27:12,653 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49912>: Client host rejected: Access denied')}
+2025-12-26 10:27:14,177 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:27:14,177 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:27:42 CET)" executed successfully
+2025-12-26 10:27:42,209 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:28:12 CET)" (scheduled at 2025-12-26 10:27:42.196153+01:00)
+2025-12-26 10:27:43,596 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:27:43,824 [ERROR] Erreur envoi mail: {'fdaubercy@gmail.com': (554, b'5.7.1 <unknown[2a01:e0a:814:6890:c059:e077:54e3:facd]:49927>: Client host rejected: Access denied')}
+2025-12-26 10:27:45,397 [INFO] Alert sent via Discord: Status poll failed: module 'requests' has no attribute 'hmac'
+2025-12-26 10:27:45,399 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:28:12 CET)" executed successfully
+2025-12-26 10:28:08,430 [INFO] Serveur WebSocket démarré sur http://0.0.0.0:5000
+2025-12-26 10:28:15,654 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:28:15,654 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:28:15,654 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:28:15,658 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 10:28:15,658 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 10:28:15,659 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 10:28:15,659 [INFO] Scheduler started
+2025-12-26 10:28:15,659 [INFO] Scheduler Freebox démarré
+2025-12-26 10:28:45,659 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:28:45 CET)" (scheduled at 2025-12-26 10:28:45.654007+01:00)
+2025-12-26 10:28:45,723 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:28:45,725 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:29:15 CET)" executed successfully
+2025-12-26 10:29:15,676 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:29:45 CET)" (scheduled at 2025-12-26 10:29:15.654007+01:00)
+2025-12-26 10:29:15,905 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:29:15,906 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:29:45 CET)" executed successfully
+2025-12-26 10:29:45,665 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:30:15 CET)" (scheduled at 2025-12-26 10:29:45.654007+01:00)
+2025-12-26 10:29:45,865 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:29:45,865 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:30:15 CET)" executed successfully
+2025-12-26 10:30:15,662 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:30:45 CET)" (scheduled at 2025-12-26 10:30:15.654007+01:00)
+2025-12-26 10:30:16,031 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:30:16,032 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:30:45 CET)" executed successfully
+2025-12-26 10:30:45,680 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:31:15 CET)" (scheduled at 2025-12-26 10:30:45.654007+01:00)
+2025-12-26 10:30:45,902 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:30:45,902 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:31:15 CET)" executed successfully
+2025-12-26 10:31:15,659 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:31:45 CET)" (scheduled at 2025-12-26 10:31:15.654007+01:00)
+2025-12-26 10:31:15,688 [INFO] Serveur WebSocket démarré sur http://0.0.0.0:5000
+2025-12-26 10:31:15,718 [ERROR] Erreur poll_status: module 'requests' has no attribute 'hmac'
+2025-12-26 10:31:15,719 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:31:45 CET)" executed successfully
+2025-12-26 10:40:23,447 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:40:23,448 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:40:23,450 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:40:23,453 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 10:40:23,454 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 10:40:23,454 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 10:40:23,455 [INFO] Scheduler started
+2025-12-26 10:40:23,457 [INFO] Scheduler Freebox démarré
+2025-12-26 10:40:33,496 [INFO] Client WebSocket connecté
+2025-12-26 10:40:53,448 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:40:53 CET)" (scheduled at 2025-12-26 10:40:53.446805+01:00)
+2025-12-26 10:40:53,529 [ERROR] poll_status error: module 'requests' has no attribute 'hmac'
+2025-12-26 10:40:53,530 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:41:23 CET)" executed successfully
+2025-12-26 10:41:23,492 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:41:53 CET)" (scheduled at 2025-12-26 10:41:23.446805+01:00)
+2025-12-26 10:41:23,902 [ERROR] poll_status error: module 'requests' has no attribute 'hmac'
+2025-12-26 10:41:23,920 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:41:53 CET)" executed successfully
+2025-12-26 10:41:53,450 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:42:23 CET)" (scheduled at 2025-12-26 10:41:53.446805+01:00)
+2025-12-26 10:41:53,983 [ERROR] poll_status error: module 'requests' has no attribute 'hmac'
+2025-12-26 10:41:53,988 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:42:23 CET)" executed successfully
+2025-12-26 10:42:23,457 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:42:53 CET)" (scheduled at 2025-12-26 10:42:23.446805+01:00)
+2025-12-26 10:42:23,976 [ERROR] poll_status error: module 'requests' has no attribute 'hmac'
+2025-12-26 10:42:23,998 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:42:53 CET)" executed successfully
+2025-12-26 10:42:53,455 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:43:23 CET)" (scheduled at 2025-12-26 10:42:53.446805+01:00)
+2025-12-26 10:42:53,579 [ERROR] poll_status error: module 'requests' has no attribute 'hmac'
+2025-12-26 10:42:53,579 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:43:23 CET)" executed successfully
+2025-12-26 10:43:23,455 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:43:53 CET)" (scheduled at 2025-12-26 10:43:23.446805+01:00)
+2025-12-26 10:43:24,039 [ERROR] poll_status error: module 'requests' has no attribute 'hmac'
+2025-12-26 10:43:24,039 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:43:53 CET)" executed successfully
+2025-12-26 10:43:25,998 [INFO] Serveur WebSocket démarré sur http://0.0.0.0:5000
+2025-12-26 10:52:52,365 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:52:52,366 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:52:52,366 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 10:52:52,369 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 10:52:52,369 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 10:52:52,370 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 10:52:52,370 [INFO] Scheduler started
+2025-12-26 10:52:52,372 [INFO] Scheduler Freebox démarré
+2025-12-26 10:52:52,373 [INFO] Serveur WebSocket démarré sur http://0.0.0.0:5000
+2025-12-26 10:52:53,383 [INFO] Client WebSocket connecté
+2025-12-26 10:52:57,806 [INFO] Client WebSocket connecté
+2025-12-26 10:53:22,380 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:53:22 CET)" (scheduled at 2025-12-26 10:53:22.364025+01:00)
+2025-12-26 10:53:22,553 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:53:22,553 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:53:52 CET)" executed successfully
+2025-12-26 10:53:43,992 [INFO] Client WebSocket connecté
+2025-12-26 10:53:52,365 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:54:22 CET)" (scheduled at 2025-12-26 10:53:52.364025+01:00)
+2025-12-26 10:53:52,464 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:53:52,464 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:54:22 CET)" executed successfully
+2025-12-26 10:54:22,367 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:54:52 CET)" (scheduled at 2025-12-26 10:54:22.364025+01:00)
+2025-12-26 10:54:22,756 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:54:22,756 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:54:52 CET)" executed successfully
+2025-12-26 10:54:30,996 [INFO] Client WebSocket connecté
+2025-12-26 10:54:52,375 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:55:22 CET)" (scheduled at 2025-12-26 10:54:52.364025+01:00)
+2025-12-26 10:54:52,434 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:54:52,434 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:55:22 CET)" executed successfully
+2025-12-26 10:55:18,065 [INFO] Client WebSocket connecté
+2025-12-26 10:55:22,381 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:55:52 CET)" (scheduled at 2025-12-26 10:55:22.364025+01:00)
+2025-12-26 10:55:22,436 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:55:22,436 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:55:52 CET)" executed successfully
+2025-12-26 10:55:52,386 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:56:22 CET)" (scheduled at 2025-12-26 10:55:52.364025+01:00)
+2025-12-26 10:55:52,553 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:55:52,579 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:56:22 CET)" executed successfully
+2025-12-26 10:56:05,006 [INFO] Client WebSocket connecté
+2025-12-26 10:56:22,388 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:56:52 CET)" (scheduled at 2025-12-26 10:56:22.364025+01:00)
+2025-12-26 10:56:22,503 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:56:22,538 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:56:52 CET)" executed successfully
+2025-12-26 10:56:52,024 [INFO] Client WebSocket connecté
+2025-12-26 10:56:52,374 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:57:22 CET)" (scheduled at 2025-12-26 10:56:52.364025+01:00)
+2025-12-26 10:56:52,447 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:56:52,448 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:57:22 CET)" executed successfully
+2025-12-26 10:57:22,379 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:57:52 CET)" (scheduled at 2025-12-26 10:57:22.364025+01:00)
+2025-12-26 10:57:22,699 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:57:22,719 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:57:52 CET)" executed successfully
+2025-12-26 10:57:37,995 [INFO] Client WebSocket connecté
+2025-12-26 10:57:52,370 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:58:22 CET)" (scheduled at 2025-12-26 10:57:52.364025+01:00)
+2025-12-26 10:57:52,371 [INFO] Running job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 10:57:52 CET)" (scheduled at 2025-12-26 10:57:52.365024+01:00)
+2025-12-26 10:57:52,380 [INFO] Running job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 10:57:52 CET)" (scheduled at 2025-12-26 10:57:52.366025+01:00)
+2025-12-26 10:57:52,428 [INFO] Poll DHCP OK
+2025-12-26 10:57:52,442 [INFO] Job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 11:02:52 CET)" executed successfully
+2025-12-26 10:57:52,442 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:57:52,442 [INFO] Job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 11:02:52 CET)" executed successfully
+2025-12-26 10:57:52,442 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:58:22 CET)" executed successfully
+2025-12-26 10:58:22,371 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:58:52 CET)" (scheduled at 2025-12-26 10:58:22.364025+01:00)
+2025-12-26 10:58:22,586 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:58:22,586 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:58:52 CET)" executed successfully
+2025-12-26 10:58:25,083 [INFO] Client WebSocket connecté
+2025-12-26 10:58:52,371 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:59:22 CET)" (scheduled at 2025-12-26 10:58:52.364025+01:00)
+2025-12-26 10:58:52,413 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:58:52,414 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:59:22 CET)" executed successfully
+2025-12-26 10:59:22,370 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:59:52 CET)" (scheduled at 2025-12-26 10:59:22.364025+01:00)
+2025-12-26 10:59:22,482 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:59:22,482 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 10:59:52 CET)" executed successfully
+2025-12-26 10:59:37,156 [INFO] Client WebSocket connecté
+2025-12-26 10:59:52,379 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:00:22 CET)" (scheduled at 2025-12-26 10:59:52.364025+01:00)
+2025-12-26 10:59:52,470 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 10:59:52,499 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:00:22 CET)" executed successfully
+2025-12-26 11:00:22,378 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:00:52 CET)" (scheduled at 2025-12-26 11:00:22.364025+01:00)
+2025-12-26 11:00:22,408 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:00:22,410 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:00:52 CET)" executed successfully
+2025-12-26 11:00:24,190 [INFO] Client WebSocket connecté
+2025-12-26 11:00:52,365 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:01:22 CET)" (scheduled at 2025-12-26 11:00:52.364025+01:00)
+2025-12-26 11:00:52,392 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:00:52,394 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:01:22 CET)" executed successfully
+2025-12-26 11:01:22,367 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:01:52 CET)" (scheduled at 2025-12-26 11:01:22.364025+01:00)
+2025-12-26 11:01:22,483 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:01:22,498 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:01:52 CET)" executed successfully
+2025-12-26 11:01:35,990 [INFO] Client WebSocket connecté
+2025-12-26 11:01:52,385 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:02:22 CET)" (scheduled at 2025-12-26 11:01:52.364025+01:00)
+2025-12-26 11:01:52,636 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:01:52,677 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:02:22 CET)" executed successfully
+2025-12-26 11:02:22,405 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:02:52 CET)" (scheduled at 2025-12-26 11:02:22.364025+01:00)
+2025-12-26 11:02:22,607 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:02:22,641 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:02:52 CET)" executed successfully
+2025-12-26 11:02:24,210 [INFO] Client WebSocket connecté
+2025-12-26 11:02:52,375 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:03:22 CET)" (scheduled at 2025-12-26 11:02:52.364025+01:00)
+2025-12-26 11:02:52,375 [INFO] Running job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 11:07:52 CET)" (scheduled at 2025-12-26 11:02:52.365024+01:00)
+2025-12-26 11:02:52,376 [INFO] Running job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 11:07:52 CET)" (scheduled at 2025-12-26 11:02:52.366025+01:00)
+2025-12-26 11:02:52,421 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:02:52,464 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:03:22 CET)" executed successfully
+2025-12-26 11:02:52,498 [INFO] Job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 11:07:52 CET)" executed successfully
+2025-12-26 11:02:52,532 [INFO] Poll DHCP OK
+2025-12-26 11:02:52,576 [INFO] Job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 11:07:52 CET)" executed successfully
+2025-12-26 11:03:22,379 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:03:52 CET)" (scheduled at 2025-12-26 11:03:22.364025+01:00)
+2025-12-26 11:03:22,452 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:03:22,452 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:03:52 CET)" executed successfully
+2025-12-26 11:03:32,112 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:03:32,113 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:03:32,114 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:03:32,116 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 11:03:32,117 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 11:03:32,118 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 11:03:32,119 [INFO] Scheduler started
+2025-12-26 11:03:32,123 [INFO] Scheduler Freebox démarré
+2025-12-26 11:03:32,124 [INFO] Serveur WebSocket démarré sur http://0.0.0.0:5000
+2025-12-26 11:03:32,173 [INFO] Client WebSocket connecté
+2025-12-26 11:03:38,578 [INFO] Client WebSocket connecté
+2025-12-26 11:04:02,115 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:04:02 CET)" (scheduled at 2025-12-26 11:04:02.111211+01:00)
+2025-12-26 11:04:02,115 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:04:02,115 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:04:32 CET)" executed successfully
+2025-12-26 11:04:32,135 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:05:02 CET)" (scheduled at 2025-12-26 11:04:32.111211+01:00)
+2025-12-26 11:04:32,137 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:04:32,137 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:05:02 CET)" executed successfully
+2025-12-26 11:05:02,122 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:05:32 CET)" (scheduled at 2025-12-26 11:05:02.111211+01:00)
+2025-12-26 11:05:02,124 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:05:02,125 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:05:32 CET)" executed successfully
+2025-12-26 11:05:32,113 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:06:02 CET)" (scheduled at 2025-12-26 11:05:32.111211+01:00)
+2025-12-26 11:05:32,115 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:05:32,115 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:06:02 CET)" executed successfully
+2025-12-26 11:06:02,114 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:06:32 CET)" (scheduled at 2025-12-26 11:06:02.111211+01:00)
+2025-12-26 11:06:02,114 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:06:02,114 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:06:32 CET)" executed successfully
+2025-12-26 11:06:32,115 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:07:02 CET)" (scheduled at 2025-12-26 11:06:32.111211+01:00)
+2025-12-26 11:06:32,115 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:06:32,115 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:07:02 CET)" executed successfully
+2025-12-26 11:07:02,123 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:07:32 CET)" (scheduled at 2025-12-26 11:07:02.111211+01:00)
+2025-12-26 11:07:02,135 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:07:02,137 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:07:32 CET)" executed successfully
+2025-12-26 11:07:32,114 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:08:02 CET)" (scheduled at 2025-12-26 11:07:32.111211+01:00)
+2025-12-26 11:07:32,117 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:07:32,118 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:08:02 CET)" executed successfully
+2025-12-26 11:08:02,125 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:08:32 CET)" (scheduled at 2025-12-26 11:08:02.111211+01:00)
+2025-12-26 11:08:02,125 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:08:02,125 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:08:32 CET)" executed successfully
+2025-12-26 11:08:32,128 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:09:02 CET)" (scheduled at 2025-12-26 11:08:32.111211+01:00)
+2025-12-26 11:08:32,130 [ERROR] poll_status error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:08:32,132 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:09:02 CET)" executed successfully
+2025-12-26 11:08:32,135 [INFO] Running job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 11:08:32 CET)" (scheduled at 2025-12-26 11:08:32.112210+01:00)
+2025-12-26 11:08:32,153 [ERROR] poll_wifi error: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:08:32,156 [INFO] Job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 11:13:32 CET)" executed successfully
+2025-12-26 11:08:32,161 [INFO] Running job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 11:08:32 CET)" (scheduled at 2025-12-26 11:08:32.113211+01:00)
+2025-12-26 11:08:32,166 [ERROR] Erreur poll_dhcp: 'FreeboxAuth' object has no attribute 'headers'
+2025-12-26 11:08:32,167 [INFO] Job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 11:13:32 CET)" executed successfully
+2025-12-26 11:08:41,472 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:08:41,473 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:08:41,473 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:08:41,474 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 11:08:41,474 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 11:08:41,474 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 11:08:41,474 [INFO] Scheduler started
+2025-12-26 11:08:41,474 [INFO] Scheduler Freebox démarré
+2025-12-26 11:08:41,474 [INFO] Serveur WebSocket démarré sur http://0.0.0.0:5000
+2025-12-26 11:08:45,006 [INFO] Client WebSocket connecté
+2025-12-26 11:08:53,549 [INFO] Client WebSocket connecté
+2025-12-26 11:09:11,480 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:09:11 CET)" (scheduled at 2025-12-26 11:09:11.472335+01:00)
+2025-12-26 11:09:11,620 [INFO] 🔐 Session Freebox établie
+2025-12-26 11:09:11,692 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:09:11,693 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:09:41 CET)" executed successfully
+2025-12-26 11:09:40,003 [INFO] Client WebSocket connecté
+2025-12-26 11:09:41,487 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:10:11 CET)" (scheduled at 2025-12-26 11:09:41.472335+01:00)
+2025-12-26 11:09:41,584 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:09:41,592 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:10:11 CET)" executed successfully
+2025-12-26 11:10:11,475 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:10:41 CET)" (scheduled at 2025-12-26 11:10:11.472335+01:00)
+2025-12-26 11:10:11,516 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:10:11,517 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:10:41 CET)" executed successfully
+2025-12-26 11:10:27,006 [INFO] Client WebSocket connecté
+2025-12-26 11:10:41,483 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:11:11 CET)" (scheduled at 2025-12-26 11:10:41.472335+01:00)
+2025-12-26 11:10:41,523 [ERROR] poll_status error: name 'can_send_alert' is not defined
+2025-12-26 11:10:41,524 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:11:11 CET)" executed successfully
+2025-12-26 11:18:50,462 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:18:50,464 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:18:50,465 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 11:18:50,468 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 11:18:50,469 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 11:18:50,470 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 11:18:50,471 [INFO] Scheduler started
+2025-12-26 11:18:50,474 [INFO] Scheduler Freebox démarré
+2025-12-26 11:18:51,020 [INFO] Client WebSocket connecté
+2025-12-26 11:19:01,088 [INFO] Client WebSocket connecté
+2025-12-26 11:19:20,470 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:19:20 CET)" (scheduled at 2025-12-26 11:19:20.462568+01:00)
+2025-12-26 11:19:20,693 [INFO] 🔐 Session Freebox établie
+2025-12-26 11:19:21,357 [INFO] Poll status OK ↓0.46 ↑0.04
+2025-12-26 11:19:21,358 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:19:50 CET)" executed successfully
+2025-12-26 11:19:47,991 [INFO] Client WebSocket connecté
+2025-12-26 11:19:50,475 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:20:20 CET)" (scheduled at 2025-12-26 11:19:50.462568+01:00)
+2025-12-26 11:19:50,509 [INFO] Poll status OK ↓0.29 ↑0.02
+2025-12-26 11:19:50,511 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:20:20 CET)" executed successfully
+2025-12-26 11:20:20,472 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:20:50 CET)" (scheduled at 2025-12-26 11:20:20.462568+01:00)
+2025-12-26 11:20:20,735 [INFO] Poll status OK ↓0.25 ↑0.05
+2025-12-26 11:20:20,735 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 11:20:50 CET)" executed successfully

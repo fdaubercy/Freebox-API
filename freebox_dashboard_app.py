@@ -1,15 +1,28 @@
 # Pré-requis:
 # pip install PyJWT
 # python -m pip install Flask
+# pip install flask-socketio (vérification par: pip show flask-socketio)
+# Si fonctionnement sous windows: pip install eventlet
+# pip install -r requirements.txt
 
-import os, json, logging, requests, jwt, time
+
+# freebox_dashboard_app.py - version finale complète
+import os, json, logging, requests, jwt, hmac, hashlib, time, smtplib
 from functools import wraps
 from flask import Flask, request, redirect, url_for, make_response, render_template
 from apscheduler.schedulers.background import BackgroundScheduler
+from flask_socketio import SocketIO, emit
+from email.mime.text import MIMEText
 
+# ---------------- Paths & Config ----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
 APP_TOKEN_FILE = os.path.join(BASE_DIR, "app_token.json")
+DATA_DIR = os.path.join(BASE_DIR, "data")
+ALERT_DIR = os.path.join(BASE_DIR, "alerts")
+
+os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs(ALERT_DIR, exist_ok=True)
 
 with open(CONFIG_FILE, "r", encoding="utf-8") as f:
     CONFIG = json.load(f)
@@ -19,14 +32,25 @@ API_BASE = f"{FREEBOX_URL}/api/{CONFIG['api_version']}"
 
 # ---------------- Logging ----------------
 LOG_FILE = os.path.join(BASE_DIR, "freebox.log")
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.FileHandler(LOG_FILE, encoding="utf-8"), logging.StreamHandler()]
-)
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s",
+                    handlers=[logging.FileHandler(LOG_FILE, encoding="utf-8"), logging.StreamHandler()])
 logger = logging.getLogger("freebox")
 
+# ---------------- Flask & WebSocket ----------------
 app = Flask(__name__)
+socketio = SocketIO(app)
+
+# ---------------- Anti-spam alertes ----------------
+LAST_ALERTS = {}
+def can_send_alert(key):
+    cooldown = CONFIG.get("alerts", {}).get("cooldown_seconds", 300)
+    now = time.time()
+    last = LAST_ALERTS.get(key, 0)
+    if now - last >= cooldown:
+        LAST_ALERTS[key] = now
+        return True
+    return False
 
 # ---------------- Freebox Auth ----------------
 class FreeboxAuth:
@@ -35,25 +59,53 @@ class FreeboxAuth:
             self.app_token = json.load(f)["app_token"]
         self.session_token = None
         self.expire = 0
+        self.retry_delay = 5
+        self.max_retry_delay = 300
 
     def _open(self):
-        challenge = requests.get(f"{API_BASE}/login/").json()["result"]["challenge"]
-        pwd = requests.hmac.new(self.app_token.encode(), challenge.encode(), digestmod="sha1").hexdigest()
-        r = requests.post(
-            f"{API_BASE}/login/session/",
-            json={"app_id": CONFIG["app_id"], "password": pwd}
-        ).json()
-        self.session_token = r["result"]["session_token"]
-        self.expire = time.time() + r["result"].get("expires", 3600)
+        try:
+            r = requests.get(f"{API_BASE}/login/", timeout=5)
+            r.raise_for_status()
+            data = r.json()
+            if "result" not in data or "challenge" not in data["result"]:
+                raise RuntimeError("Challenge Freebox manquant")
+            challenge = data["result"]["challenge"]
+            pwd = hmac.new(
+                self.app_token.encode(),
+                challenge.encode(),
+                hashlib.sha1
+            ).hexdigest()
+            r = requests.post(
+                f"{API_BASE}/login/session/",
+                json={"app_id": CONFIG["app_id"], "password": pwd},
+                timeout=5
+            )
+            r.raise_for_status()
+            result = r.json()["result"]
+            if "session_token" not in result:
+                raise RuntimeError("session_token manquant")
+            self.session_token = result["session_token"]
+            self.expire = time.time() + result.get("expires", 3600)
+            self.retry_delay = 5
+            logger.info("🔐 Session Freebox établie")
+        except Exception as e:
+            logger.error(f"Freebox auth failed: {e}")
+            time.sleep(self.retry_delay)
+            self.retry_delay = min(self.retry_delay * 2, self.max_retry_delay)
+            raise
 
     def headers(self):
-        if not self.session_token or time.time() > self.expire - 30:
-            self._open()
+        try:
+            if not self.session_token or time.time() > self.expire - 30:
+                self._open()
+        except Exception as e:
+            logger.error(f"Freebox auth error: {e}")
+            raise
         return {"X-Fbx-App-Auth": self.session_token}
 
 freebox = FreeboxAuth()
 
-# ---------------- JWT helpers ----------------
+# ---------------- JWT ----------------
 def generate_jwt(user):
     payload = {"user": user, "exp": int(time.time()) + CONFIG["jwt_exp"]}
     return jwt.encode(payload, CONFIG["jwt_secret"], algorithm="HS256")
@@ -72,29 +124,22 @@ def jwt_required(f):
     return wrapper
 
 # ---------------- Routes ----------------
-@app.route("/")
+@app.route('/')
 def index():
     return redirect(url_for("dashboard") if request.cookies.get("jwt") else url_for("login"))
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route('/login', methods=["GET","POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html")
-
-    if request.form["username"] == CONFIG["local_user"] and \
-       request.form["password"] == CONFIG["local_password"]:
+    if request.form["username"] == CONFIG["local_user"] and request.form["password"] == CONFIG["local_password"]:
         token = generate_jwt(request.form["username"])
-        resp = make_response(render_template(
-            "login_success.html",
-            user=request.form["username"],
-            token=token
-        ))
+        resp = make_response(render_template("login_success.html", user=request.form["username"], token=token))
         resp.set_cookie("jwt", token)
         return resp
-
     return render_template("login.html", error=True), 401
 
-@app.route("/dashboard")
+@app.route('/dashboard')
 @jwt_required
 def dashboard():
     buttons = [
@@ -109,7 +154,7 @@ def dashboard():
     ]
     return render_template("dashboard.html", buttons=buttons)
 
-@app.route("/category/<name>")
+@app.route('/category/<name>')
 @jwt_required
 def category(name):
     endpoints = {
@@ -125,32 +170,49 @@ def category(name):
     url = endpoints.get(name)
     if not url:
         return "Catégorie inconnue", 404
-    r = requests.get(url, headers=freebox.headers())
-    return render_template("category.html", title=name.capitalize(), data=r.json())
+    r = requests.get(url, headers=freebox.headers(), timeout=5)
+    data = r.json()
+    return render_template("category.html", title=name.capitalize(), data=data)
 
-# ---------------- Scheduler ----------------
+# ---------------- Scheduler & Data ----------------
 def save_data(name, data):
-    path = os.path.join(BASE_DIR, f"data_{name}.json")
+    path = os.path.join(DATA_DIR, f"data_{name}.json")
     with open(path, "a", encoding="utf-8") as f:
         f.write(json.dumps({"ts": int(time.time()), "data": data}) + "\n")
+    socketio.emit("realtime", {"type": name, "timestamp": int(time.time()), "data": data})
 
+# ---- Tâches ----
 def poll_status():
     try:
         r = requests.get(f"{API_BASE}/connection/", headers=freebox.headers(), timeout=5)
         r.raise_for_status()
-        save_data("status", r.json())
-        logger.info("Poll status OK")
+        data = r.json()
+        save_data("status", data)
+        down = data["result"].get("rate_down", 0)/1_000_000
+        up = data["result"].get("rate_up", 0)/1_000_000
+        t = CONFIG["alerts"]["thresholds"]
+        if down < t["download_min_mbps"] and can_send_alert("low_download"):
+            send_alert(f"Débit descendant faible : {down:.2f} Mbps")
+        if up < t["upload_min_mbps"] and can_send_alert("low_upload"):
+            send_alert(f"Débit montant faible : {up:.2f} Mbps")
+        logger.info(f"Poll status OK ↓{down:.2f} ↑{up:.2f}")
     except Exception as e:
-        logger.error(f"Erreur poll_status: {e}")
+        logger.error(f"poll_status error: {e}")
 
 def poll_wifi():
     try:
         r = requests.get(f"{API_BASE}/wifi/config/", headers=freebox.headers(), timeout=5)
         r.raise_for_status()
-        save_data("wifi", r.json())
+        data = r.json()
+        save_data("wifi", data)
+        clients = data["result"].get("stations_count", 0)
+        socketio.emit("wifi_stats", {"timestamp": int(time.time()), "clients": clients, "enabled": data["result"].get("enabled", False)})
+        if CONFIG["alerts"]["thresholds"]["wifi_enabled_required"] and not data["result"].get("enabled"):
+            if can_send_alert("wifi_down"):
+                send_alert("🚨 WiFi désactivé ou indisponible")
         logger.info("Poll WiFi OK")
     except Exception as e:
-        logger.error(f"Erreur poll_wifi: {e}")
+        logger.error(f"poll_wifi error: {e}")
 
 def poll_dhcp():
     try:
@@ -159,8 +221,39 @@ def poll_dhcp():
         save_data("dhcp", r.json())
         logger.info("Poll DHCP OK")
     except Exception as e:
-        logger.error(f"Erreur poll_dhcp: {e}")
+        logger.error(f"poll_dhcp error: {e}")
 
+# ---------------- Alertes ----------------
+def send_alert(message):
+    if not CONFIG.get("alerts", {}).get("enabled", False):
+        return
+    alerts = CONFIG["alerts"]
+    # Mail
+    if alerts.get("mail", {}).get("enabled", False):
+        try:
+            msg = MIMEText(message)
+            msg["Subject"] = "Freebox Alert"
+            msg["From"] = alerts["mail"]["from"]
+            msg["To"] = ",".join(alerts["mail"]["to"])
+            server = smtplib.SMTP(alerts["mail"]["server"], alerts["mail"]["port"])
+            if alerts["mail"].get("tls", False):
+                server.starttls()
+            if alerts["mail"].get("username"):
+                server.login(alerts["mail"]["username"], alerts["mail"]["password"])
+            server.send_message(msg)
+            server.quit()
+            logger.info(f"Alert sent via mail: {message}")
+        except Exception as e:
+            logger.error(f"Erreur alerte mail: {e}")
+    # Discord
+    if alerts.get("discord", {}).get("enabled", False):
+        try:
+            requests.post(alerts["discord"]["webhook"], json={"content": f"🚨 Freebox Alert\n{message}"}, timeout=5)
+            logger.info(f"Alert sent via Discord: {message}")
+        except Exception as e:
+            logger.error(f"Erreur alerte Discord: {e}")
+
+# ---------------- Scheduler ----------------
 scheduler = BackgroundScheduler()
 scheduler.add_job(poll_status, 'interval', seconds=30)
 scheduler.add_job(poll_wifi, 'interval', minutes=5)
@@ -168,6 +261,11 @@ scheduler.add_job(poll_dhcp, 'interval', minutes=5)
 scheduler.start()
 logger.info("Scheduler Freebox démarré")
 
-# ---------------- Run Flask ----------------
+# ---------------- WebSocket ----------------
+@socketio.on('connect')
+def ws_connect():
+    logger.info('Client WebSocket connecté')
+
+# ---------------- Run ----------------
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    socketio.run(app, host="0.0.0.0", port=CONFIG.get("web_port", 5000))

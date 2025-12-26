@@ -59,6 +59,31 @@ python -m pytest tests/
 Modifiez `config.json` pour ajuster les paramètres de configuration.
 
 ## Fonctionnalités
+✅ v1.1.1
+- Alertes débit & WiFi configurables
+- Anti-spam automatique
+- Graphiques temps réel evolue toutes les 30s
+- Prêt pour Grafana / Prometheus
+- Fonctionne en mode headless
+- Boutons fonctionnels
+- Alertes partir si seuil dépassé
+- Reconnexion Freebox automatique
+- Backoff intelligent
+- Graphique clients Wi-Fi temps réel
+- Alertes Wi-Fi down
+- Toujours compatible headless
+
+✅ v1.1.0
+- Scheduler APScheduler pour requêtes régulières sur Freebox
+- WebSocket pour mise à jour temps réel du dashboard
+- Stockage des données JSON pour graphiques historiques
+- Alertes automatiques par mail et Discord
+- Dashboard Flask avec pages HTML externes et icônes sur les boutons
+- Activer / désactiver les alertes sans modifier le code
+- Mail et Discord indépendants
+- TLS, login SMTP supportés
+- Prêt pour alertes intelligentes (seuils, uptime, etc.)
+
 ✅ v1.0
 - Le scheduler APScheduler poll l’API Freebox toutes les 30s/5min
 - Les réponses sont stockées dans des fichiers JSON (data_status.json, data_wifi,json, data_dhcp.json)

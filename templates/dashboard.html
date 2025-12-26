@@ -1,15 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <title>Freebox Dashboard</title>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Socket.IO -->
+        <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+        <style>
+            .charts {
+                width: 90%;
+                margin: 30px auto;
+                background: #1e1e1e;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            canvas {
+                background: #121212;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            .buttons {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 20px;
+                width: 90%;
+                margin: 30px auto;
+            }
+
+            .buttons button {
+                font-size: 16px;
+                padding: 15px;
+            }
+        </style>
     </head>
+
     <body>
-        <h1>Freebox Dashboard</h1>
+        <h1>📡 Freebox Dashboard</h1>
+
+        <!-- =================== BOUTONS =================== -->
         <div class="buttons">
             {% for name, url, icon in buttons %}
-            <button onclick="window.location='{{ url }}'">{{ icon }} {{ name }}</button>
+                <button onclick="window.location='{{ url }}'">
+                    {{ icon }} {{ name }}
+                </button>
             {% endfor %}
         </div>
-    </body>
+
+        <!-- =================== GRAPHIQUE DEBIT =================== -->
+        <div class="charts">
+            <h2>📈 Débit Internet (temps réel)</h2>
+            <canvas id="speedChart" height="100"></canvas>
+        </div>
+
+        <!-- =================== GRAPHIQUE WIFI =================== -->
+        <div class="charts">
+            <h2>📶 Clients Wi-Fi connectés</h2>
+            <canvas id="wifiChart" height="100"></canvas>
+        </div>
+
+        <script>
+            /* =================== CHART DEBIT =================== */
+            const ctx = document.getElementById("speedChart").getContext("2d");
+            const speedChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: [],
+                    datasets: [
+                        { label: "Download (Mbps)", data: [], borderColor: "#00e5ff", backgroundColor: "rgba(0,229,255,0.1)", tension: 0.3 },
+                        { label: "Upload (Mbps)", data: [], borderColor: "#ff9800", backgroundColor: "rgba(255,152,0,0.1)", tension: 0.3 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { labels: { color: "white" } } },
+                    scales: {
+                        x: { ticks: { color: "white" }, grid: { color: "#333" } },
+                        y: { ticks: { color: "white" }, grid: { color: "#333" }, title: { display: true, text: "Mbps", color: "white" } }
+                    }
+                }
+            });
+
+            /* =================== CHART WIFI =================== */
+            const wifiCtx = document.getElementById("wifiChart").getContext("2d");
+            const wifiChart = new Chart(wifiCtx, {
+                type: "line",
+                data: {
+                    labels: [],
+                    datasets: [
+                        { label: "Clients Wi-Fi", data: [], borderColor: "#4caf50", backgroundColor: "rgba(76,175,80,0.15)", tension: 0.3 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { labels: { color: "white" } } },
+                    scales: {
+                        x: { ticks: { color: "white" }, grid: { color: "#333" } },
+                        y: { ticks: { color: "white" }, grid: { color: "#333" }, beginAtZero: true }
+                    }
+                }
+            });
+
+            /* =================== WEBSOCKET =================== */
+            const socket = io();
+
+            socket.on("connect", () => { console.log("🟢 WebSocket connecté"); });
+
+            socket.on("realtime", msg => {
+                if(msg.type === "status") {
+                    const down = msg.data.result.rate_down / 1_000_000;
+                    const up = msg.data.result.rate_up / 1_000_000;
+                    const time = new Date().toLocaleTimeString();
+                    speedChart.data.labels.push(time);
+                    speedChart.data.datasets[0].data.push(down);
+                    speedChart.data.datasets[1].data.push(up);
+                    if(speedChart.data.labels.length > 30) {
+                        speedChart.data.labels.shift();
+                        speedChart.data.datasets.forEach(ds => ds.data.shift());
+                    }
+                    speedChart.update();
+                }
+            });
+
+            socket.on("wifi_stats", msg => {
+                const time = new Date().toLocaleTimeString();
+                wifiChart.data.labels.push(time);
+                wifiChart.data.datasets[0].data.push(msg.clients);
+                if(wifiChart.data.labels.length > 30) {
+                    wifiChart.data.labels.shift();
+                    wifiChart.data.datasets[0].data.shift();
+                }
+                wifiChart.update();
+            });
+        </script>
+        </body>
 </html>
