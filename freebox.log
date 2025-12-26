@@ -1,0 +1,484 @@
+2025-12-25 19:52:54,727 [WARNING] config.json manquant — fichier créé avec valeurs par défaut
+2025-12-25 19:52:54,887 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 19:52:54,890 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 19:53:14,852 [INFO] 192.168.0.3 - - [25/Dec/2025 19:53:14] "GET / HTTP/1.1" 200 -
+2025-12-25 19:53:15,399 [INFO] 192.168.0.3 - - [25/Dec/2025 19:53:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-25 20:00:06,971 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:00:06,974 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:00:17,804 [INFO] 192.168.0.3 - - [25/Dec/2025 20:00:17] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-25 20:02:36,179 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:02:36,200 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:07:21,659 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:07:21,666 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:07:30,241 [INFO] 192.168.0.3 - - [25/Dec/2025 20:07:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-25 20:08:58,397 [INFO] 192.168.0.3 - - [25/Dec/2025 20:08:58] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:10:15,144 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:10:15,146 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:10:22,734 [INFO] 192.168.0.3 - - [25/Dec/2025 20:10:22] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:10:27,058 [INFO] 192.168.0.3 - - [25/Dec/2025 20:10:27] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-25 20:10:31,067 [INFO] 192.168.0.3 - - [25/Dec/2025 20:10:31] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-25 20:11:09,083 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:11:09,084 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:11:18,507 [INFO] 192.168.0.3 - - [25/Dec/2025 20:11:18] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-25 20:12:02,934 [INFO] 192.168.0.3 - - [25/Dec/2025 20:12:02] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-25 20:14:25,918 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:14:25,920 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:14:30,772 [INFO] 192.168.0.3 - - [25/Dec/2025 20:14:30] "GET / HTTP/1.1" 200 -
+2025-12-25 20:15:56,800 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:15:56,804 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:16:01,592 [INFO] 192.168.0.3 - - [25/Dec/2025 20:16:01] "GET / HTTP/1.1" 200 -
+2025-12-25 20:16:04,027 [INFO] 192.168.0.3 - - [25/Dec/2025 20:16:04] "GET / HTTP/1.1" 200 -
+2025-12-25 20:16:09,533 [INFO] 192.168.0.3 - - [25/Dec/2025 20:16:09] "GET / HTTP/1.1" 200 -
+2025-12-25 20:17:08,582 [INFO] 192.168.0.3 - - [25/Dec/2025 20:17:08] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:17:28,163 [INFO] 192.168.0.3 - - [25/Dec/2025 20:17:28] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+2025-12-25 20:21:43,715 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:21:43,717 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:22:13,137 [INFO] 192.168.0.3 - - [25/Dec/2025 20:22:13] "GET /login HTTP/1.1" 200 -
+2025-12-25 20:22:22,790 [INFO] 192.168.0.3 - - [25/Dec/2025 20:22:22] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-12-25 20:24:36,939 [INFO] 192.168.0.3 - - [25/Dec/2025 20:24:36] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-12-25 20:24:41,830 [INFO] 192.168.0.3 - - [25/Dec/2025 20:24:41] "GET / HTTP/1.1" 200 -
+2025-12-25 20:24:51,016 [INFO] 192.168.0.3 - - [25/Dec/2025 20:24:51] "GET /login HTTP/1.1" 200 -
+2025-12-25 20:24:59,370 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 144, in login
+    token = generate_jwt(username)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 88, in generate_jwt
+    "exp": int(time.time()) + CONFIG["jwt_exp"]
+                              ~~~~~~^^^^^^^^^^^
+KeyError: 'jwt_exp'
+2025-12-25 20:24:59,410 [INFO] 192.168.0.3 - - [25/Dec/2025 20:24:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-12-25 20:25:27,843 [INFO] 192.168.0.3 - - [25/Dec/2025 20:25:27] "GET /login HTTP/1.1" 200 -
+2025-12-25 20:25:38,775 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 144, in login
+    token = generate_jwt(username)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 88, in generate_jwt
+    "exp": int(time.time()) + CONFIG["jwt_exp"]
+                              ~~~~~~^^^^^^^^^^^
+KeyError: 'jwt_exp'
+2025-12-25 20:25:38,818 [INFO] 192.168.0.3 - - [25/Dec/2025 20:25:38] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-12-25 20:29:15,264 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:29:15,267 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:29:36,938 [INFO] 192.168.0.3 - - [25/Dec/2025 20:29:36] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:32:21,541 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:32:21,546 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:32:37,360 [INFO] 192.168.0.3 - - [25/Dec/2025 20:32:37] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:34:06,068 [INFO] 192.168.0.3 - - [25/Dec/2025 20:34:06] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:34:22,168 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:34:22,171 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:34:31,639 [INFO] 192.168.0.3 - - [25/Dec/2025 20:34:31] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:34:33,849 [INFO] 192.168.0.3 - - [25/Dec/2025 20:34:33] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:36:23,566 [INFO] 192.168.0.3 - - [25/Dec/2025 20:36:23] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:38:05,291 [INFO] 192.168.0.3 - - [25/Dec/2025 20:38:05] "[31m[1mGET /status HTTP/1.1[0m" 401 -
+2025-12-25 20:40:00,196 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:40:00,301 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:40:20,506 [INFO] 192.168.0.3 - - [25/Dec/2025 20:40:20] "GET /login HTTP/1.1" 200 -
+2025-12-25 20:40:30,934 [INFO] 192.168.0.3 - - [25/Dec/2025 20:40:30] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:41:08,841 [ERROR] Exception on /status [GET]
+Traceback (most recent call last):
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 106, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 153, in status
+    r = requests.get(f"{API_BASE}/connection/", headers=freebox.headers())
+                                                        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 80, in headers
+    self._open_session()
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 75, in _open_session
+    self.session_expire = time.time() + r["result"]["expires"]
+                                        ~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'expires'
+2025-12-25 20:41:08,856 [INFO] 192.168.0.3 - - [25/Dec/2025 20:41:08] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:41:27,245 [ERROR] Exception on /status [GET]
+Traceback (most recent call last):
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 106, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 153, in status
+    r = requests.get(f"{API_BASE}/connection/", headers=freebox.headers())
+                                                        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 80, in headers
+    self._open_session()
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 75, in _open_session
+    self.session_expire = time.time() + r["result"]["expires"]
+                                        ~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'expires'
+2025-12-25 20:41:27,268 [INFO] 192.168.0.3 - - [25/Dec/2025 20:41:27] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:41:56,645 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:41:56,647 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:42:02,556 [INFO] 192.168.0.3 - - [25/Dec/2025 20:42:02] "GET /login HTTP/1.1" 200 -
+2025-12-25 20:42:10,746 [INFO] 192.168.0.3 - - [25/Dec/2025 20:42:10] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:43:05,575 [ERROR] Exception on /status [GET]
+Traceback (most recent call last):
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\.platformio\penv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 106, in decorated
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 153, in status
+    r = requests.get(f"{API_BASE}/connection/", headers=freebox.headers())
+                                                        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 80, in headers
+    self._open_session()
+  File "C:\Users\fdaub\Documents\Github\api_freebox\freebox_web_app_jwt.py", line 75, in _open_session
+    self.session_expire = time.time() + r["result"]["expires"]
+                                        ~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'expires'
+2025-12-25 20:43:05,583 [INFO] 192.168.0.3 - - [25/Dec/2025 20:43:05] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:48:31,911 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:48:31,912 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:48:43,458 [INFO] 192.168.0.3 - - [25/Dec/2025 20:48:43] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:49:21,150 [INFO] 192.168.0.3 - - [25/Dec/2025 20:49:21] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:49:34,962 [INFO] 192.168.0.3 - - [25/Dec/2025 20:49:34] "GET /login HTTP/1.1" 200 -
+2025-12-25 20:49:42,681 [INFO] 192.168.0.3 - - [25/Dec/2025 20:49:42] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:50:06,403 [INFO] 192.168.0.3 - - [25/Dec/2025 20:50:06] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:54:33,700 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:54:33,702 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:54:41,051 [INFO] 192.168.0.3 - - [25/Dec/2025 20:54:41] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:55:09,147 [ERROR] Erreur Freebox /status: 'expires'
+2025-12-25 20:55:09,147 [INFO] 192.168.0.3 - - [25/Dec/2025 20:55:09] "[35m[1mGET /status HTTP/1.1[0m" 500 -
+2025-12-25 20:58:20,374 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 20:58:20,376 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 20:58:27,955 [INFO] 192.168.0.3 - - [25/Dec/2025 20:58:27] "POST /login HTTP/1.1" 200 -
+2025-12-25 20:59:10,610 [INFO] Session Freebox ouverte
+2025-12-25 20:59:10,678 [INFO] 192.168.0.3 - - [25/Dec/2025 20:59:10] "GET /status HTTP/1.1" 200 -
+2025-12-25 21:00:13,486 [INFO] 192.168.0.3 - - [25/Dec/2025 21:00:13] "GET /wifi HTTP/1.1" 200 -
+2025-12-25 21:10:13,338 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:10:13,341 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:10:23,176 [INFO] 192.168.0.3 - - [25/Dec/2025 21:10:23] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:10:31,882 [INFO] 192.168.0.3 - - [25/Dec/2025 21:10:31] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:10:50,460 [INFO] 192.168.0.3 - - [25/Dec/2025 21:10:50] "[33mGET /status HTTP/1.1[0m" 404 -
+2025-12-25 21:10:51,538 [INFO] 192.168.0.3 - - [25/Dec/2025 21:10:51] "[33mGET /status HTTP/1.1[0m" 404 -
+2025-12-25 21:11:20,985 [INFO] 192.168.0.3 - - [25/Dec/2025 21:11:20] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:21:06,140 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:21:06,142 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:21:17,243 [INFO] 192.168.0.3 - - [25/Dec/2025 21:21:17] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:36:01,307 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:36:01,311 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:36:12,382 [INFO] 192.168.0.3 - - [25/Dec/2025 21:36:12] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:36:25,109 [INFO] 192.168.0.3 - - [25/Dec/2025 21:36:25] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:37:02,197 [INFO] Session Freebox ouverte
+2025-12-25 21:37:02,261 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:02] "GET /wifi HTTP/1.1" 200 -
+2025-12-25 21:37:12,634 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:12] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:37:15,737 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:15] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:37:21,364 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:21] "[31m[1mGET /wifi HTTP/1.1[0m" 401 -
+2025-12-25 21:37:22,809 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:22] "[31m[1mGET /wifi HTTP/1.1[0m" 401 -
+2025-12-25 21:37:23,708 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:23] "[31m[1mGET /wifi HTTP/1.1[0m" 401 -
+2025-12-25 21:37:29,683 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:29] "GET /wifi HTTP/1.1" 200 -
+2025-12-25 21:37:37,048 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:37] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:37:39,444 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:39] "[31m[1mGET /wifi HTTP/1.1[0m" 401 -
+2025-12-25 21:37:40,761 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:40] "[31m[1mGET /dhcp HTTP/1.1[0m" 401 -
+2025-12-25 21:37:41,953 [INFO] 192.168.0.3 - - [25/Dec/2025 21:37:41] "[31m[1mPOST /reboot HTTP/1.1[0m" 401 -
+2025-12-25 21:38:01,814 [INFO] 192.168.0.3 - - [25/Dec/2025 21:38:01] "GET /wifi HTTP/1.1" 200 -
+2025-12-25 21:38:42,963 [INFO] 192.168.0.3 - - [25/Dec/2025 21:38:42] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:39:19,607 [INFO] 192.168.0.3 - - [25/Dec/2025 21:39:19] "[31m[1mGET /dhcp HTTP/1.1[0m" 401 -
+2025-12-25 21:39:21,380 [INFO] 192.168.0.3 - - [25/Dec/2025 21:39:21] "[31m[1mGET /wifi HTTP/1.1[0m" 401 -
+2025-12-25 21:41:07,545 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:41:07,554 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:41:13,692 [INFO] 192.168.0.3 - - [25/Dec/2025 21:41:13] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:41:24,246 [INFO] 192.168.0.3 - - [25/Dec/2025 21:41:24] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:44:41,390 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:44:41,395 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:44:58,900 [INFO] 192.168.0.3 - - [25/Dec/2025 21:44:58] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:45:11,608 [INFO] 192.168.0.3 - - [25/Dec/2025 21:45:11] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:45:21,467 [INFO] 192.168.0.3 - - [25/Dec/2025 21:45:21] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:45:44,890 [INFO] 192.168.0.3 - - [25/Dec/2025 21:45:44] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:45:49,320 [INFO] 192.168.0.3 - - [25/Dec/2025 21:45:49] "[31m[1mGET /wifi HTTP/1.1[0m" 401 -
+2025-12-25 21:46:28,935 [INFO] 192.168.0.3 - - [25/Dec/2025 21:46:28] "[31m[1mGET /dhcp HTTP/1.1[0m" 401 -
+2025-12-25 21:46:30,283 [INFO] 192.168.0.3 - - [25/Dec/2025 21:46:30] "[31m[1mPOST /reboot HTTP/1.1[0m" 401 -
+2025-12-25 21:49:11,743 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:49:11,747 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:49:29,556 [INFO] 192.168.0.3 - - [25/Dec/2025 21:49:29] "[33mGET /admin HTTP/1.1[0m" 404 -
+2025-12-25 21:49:35,568 [INFO] 192.168.0.3 - - [25/Dec/2025 21:49:35] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:49:46,621 [INFO] 192.168.0.3 - - [25/Dec/2025 21:49:46] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:50:15,756 [INFO] 192.168.0.3 - - [25/Dec/2025 21:50:15] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:50:20,365 [INFO] Session Freebox ouverte
+2025-12-25 21:50:20,489 [INFO] 192.168.0.3 - - [25/Dec/2025 21:50:20] "GET /wifi HTTP/1.1" 200 -
+2025-12-25 21:50:23,206 [ERROR] Erreur Freebox /dhcp: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/lan/dhcp/
+2025-12-25 21:50:23,206 [INFO] 192.168.0.3 - - [25/Dec/2025 21:50:23] "[35m[1mGET /dhcp HTTP/1.1[0m" 500 -
+2025-12-25 21:58:34,365 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 21:58:34,366 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 21:58:40,593 [INFO] 192.168.0.3 - - [25/Dec/2025 21:58:40] "GET /login HTTP/1.1" 200 -
+2025-12-25 21:58:52,221 [INFO] 192.168.0.3 - - [25/Dec/2025 21:58:52] "POST /login HTTP/1.1" 200 -
+2025-12-25 21:58:58,261 [INFO] 192.168.0.3 - - [25/Dec/2025 21:58:58] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 21:59:08,012 [INFO] Session Freebox ouverte
+2025-12-25 21:59:08,082 [INFO] 192.168.0.3 - - [25/Dec/2025 21:59:08] "GET /wifi HTTP/1.1" 200 -
+2025-12-25 21:59:11,118 [INFO] 192.168.0.3 - - [25/Dec/2025 21:59:11] "GET /dhcp HTTP/1.1" 200 -
+2025-12-25 22:10:09,775 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 22:10:09,777 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 22:10:21,789 [INFO] 192.168.0.3 - - [25/Dec/2025 22:10:21] "GET /login HTTP/1.1" 200 -
+2025-12-25 22:10:34,546 [INFO] 192.168.0.3 - - [25/Dec/2025 22:10:34] "POST /login HTTP/1.1" 200 -
+2025-12-25 22:13:42,852 [INFO] 192.168.0.3 - - [25/Dec/2025 22:13:42] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 22:22:28,622 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 22:22:28,625 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 22:22:38,348 [INFO] 192.168.0.3 - - [25/Dec/2025 22:22:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-25 22:22:38,370 [INFO] 192.168.0.3 - - [25/Dec/2025 22:22:38] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 22:22:48,975 [INFO] 192.168.0.3 - - [25/Dec/2025 22:22:48] "[33mGET /dhcp HTTP/1.1[0m" 404 -
+2025-12-25 22:23:11,138 [INFO] 192.168.0.3 - - [25/Dec/2025 22:23:11] "[33mGET /filesystem HTTP/1.1[0m" 404 -
+2025-12-25 22:23:47,254 [INFO] 192.168.0.3 - - [25/Dec/2025 22:23:47] "[33mGET /filesystem HTTP/1.1[0m" 404 -
+2025-12-25 22:26:26,691 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 22:26:26,694 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 22:26:32,652 [INFO] 192.168.0.3 - - [25/Dec/2025 22:26:32] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 22:26:35,451 [INFO] Session Freebox ouverte
+2025-12-25 22:26:35,500 [ERROR] Erreur Freebox /filesystem: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/fs/
+2025-12-25 22:26:35,500 [INFO] 192.168.0.3 - - [25/Dec/2025 22:26:35] "[35m[1mGET /category/filesystem HTTP/1.1[0m" 500 -
+2025-12-25 22:26:52,310 [INFO] 192.168.0.3 - - [25/Dec/2025 22:26:52] "GET /category/config HTTP/1.1" 200 -
+2025-12-25 22:27:30,368 [INFO] 192.168.0.3 - - [25/Dec/2025 22:27:30] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-25 22:27:47,790 [INFO] 192.168.0.3 - - [25/Dec/2025 22:27:47] "GET /category/calls HTTP/1.1" 200 -
+2025-12-25 22:27:57,912 [INFO] 192.168.0.3 - - [25/Dec/2025 22:27:57] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-25 22:28:04,391 [INFO] 192.168.0.3 - - [25/Dec/2025 22:28:04] "GET /category/config HTTP/1.1" 200 -
+2025-12-25 22:28:35,487 [INFO] 192.168.0.3 - - [25/Dec/2025 22:28:35] "GET /category/config HTTP/1.1" 200 -
+2025-12-25 22:28:38,761 [INFO] 192.168.0.3 - - [25/Dec/2025 22:28:38] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-25 22:28:44,740 [INFO] 192.168.0.3 - - [25/Dec/2025 22:28:44] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-25 22:28:51,366 [ERROR] Erreur Freebox /filesystem: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/fs/
+2025-12-25 22:28:51,382 [INFO] 192.168.0.3 - - [25/Dec/2025 22:28:51] "[35m[1mGET /category/filesystem HTTP/1.1[0m" 500 -
+2025-12-25 22:28:56,402 [ERROR] Erreur Freebox /airmedia: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/airmedia/
+2025-12-25 22:28:56,402 [INFO] 192.168.0.3 - - [25/Dec/2025 22:28:56] "[35m[1mGET /category/airmedia HTTP/1.1[0m" 500 -
+2025-12-25 22:29:00,061 [ERROR] Erreur Freebox /storage: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/storage/
+2025-12-25 22:29:00,062 [INFO] 192.168.0.3 - - [25/Dec/2025 22:29:00] "[35m[1mGET /category/storage HTTP/1.1[0m" 500 -
+2025-12-25 22:29:03,263 [ERROR] Erreur Freebox /parental: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/parental/
+2025-12-25 22:29:03,263 [INFO] 192.168.0.3 - - [25/Dec/2025 22:29:03] "[35m[1mGET /category/parental HTTP/1.1[0m" 500 -
+2025-12-25 22:32:19,564 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 22:32:19,575 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 22:32:25,968 [INFO] 192.168.0.3 - - [25/Dec/2025 22:32:25] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 22:32:57,218 [INFO] Session Freebox ouverte
+2025-12-25 22:32:57,284 [INFO] 192.168.0.3 - - [25/Dec/2025 22:32:57] "GET /category/config HTTP/1.1" 200 -
+2025-12-25 22:33:39,975 [ERROR] Erreur Freebox /airmedia: 404 Client Error: Not Found for url: http://mafreebox.freebox.fr/api/v15/airmedia/
+2025-12-25 22:33:39,978 [INFO] 192.168.0.3 - - [25/Dec/2025 22:33:39] "[35m[1mGET /category/airmedia HTTP/1.1[0m" 500 -
+2025-12-25 22:33:49,970 [INFO] 192.168.0.3 - - [25/Dec/2025 22:33:49] "GET /category/config HTTP/1.1" 200 -
+2025-12-25 22:34:01,565 [INFO] 192.168.0.3 - - [25/Dec/2025 22:34:01] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-25 22:34:04,292 [INFO] 192.168.0.3 - - [25/Dec/2025 22:34:04] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-25 22:34:30,891 [INFO] 192.168.0.3 - - [25/Dec/2025 22:34:30] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-25 22:43:38,865 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-25 22:43:38,866 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-25 22:43:48,429 [INFO] Session Freebox ouverte
+2025-12-25 22:43:48,477 [INFO] 192.168.0.3 - - [25/Dec/2025 22:43:48] "GET /category/calls HTTP/1.1" 200 -
+2025-12-25 22:44:37,283 [INFO] 192.168.0.3 - - [25/Dec/2025 22:44:37] "GET /dashboard HTTP/1.1" 200 -
+2025-12-25 22:44:40,735 [INFO] 192.168.0.3 - - [25/Dec/2025 22:44:40] "GET /category/calls HTTP/1.1" 200 -
+2025-12-25 22:44:45,971 [INFO] 192.168.0.3 - - [25/Dec/2025 22:44:45] "GET /category/storage HTTP/1.1" 200 -
+2025-12-25 22:44:50,696 [INFO] 192.168.0.3 - - [25/Dec/2025 22:44:50] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-25 22:45:13,123 [INFO] 192.168.0.3 - - [25/Dec/2025 22:45:13] "GET /category/airmedia HTTP/1.1" 200 -
+2025-12-26 07:56:17,775 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 07:56:17,814 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 07:56:33,643 [INFO] 192.168.0.3 - - [26/Dec/2025 07:56:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-26 07:56:33,793 [INFO] 192.168.0.3 - - [26/Dec/2025 07:56:33] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-12-26 07:56:33,874 [INFO] 192.168.0.3 - - [26/Dec/2025 07:56:33] "GET /login HTTP/1.1" 200 -
+2025-12-26 07:56:45,419 [INFO] 192.168.0.3 - - [26/Dec/2025 07:56:45] "POST /login HTTP/1.1" 200 -
+2025-12-26 07:56:48,729 [INFO] 192.168.0.3 - - [26/Dec/2025 07:56:48] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 07:56:56,844 [INFO] Session Freebox ouverte
+2025-12-26 07:56:56,932 [INFO] 192.168.0.3 - - [26/Dec/2025 07:56:56] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-26 07:57:11,419 [INFO] 192.168.0.3 - - [26/Dec/2025 07:57:11] "GET /category/config HTTP/1.1" 200 -
+2025-12-26 07:57:17,189 [INFO] 192.168.0.3 - - [26/Dec/2025 07:57:17] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-26 08:00:24,164 [INFO] 192.168.0.3 - - [26/Dec/2025 08:00:24] "GET /category/dhcp HTTP/1.1" 200 -
+2025-12-26 08:03:51,798 [INFO] 192.168.0.3 - - [26/Dec/2025 08:03:51] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-26 08:08:19,986 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 08:08:20,003 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 08:08:28,240 [INFO] Session Freebox ouverte
+2025-12-26 08:08:28,303 [ERROR] Erreur Freebox /downloads: 'result'
+2025-12-26 08:08:28,335 [INFO] 192.168.0.3 - - [26/Dec/2025 08:08:28] "[35m[1mGET /category/downloads HTTP/1.1[0m" 500 -
+2025-12-26 08:08:38,970 [INFO] 192.168.0.3 - - [26/Dec/2025 08:08:38] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 08:08:47,076 [INFO] 192.168.0.3 - - [26/Dec/2025 08:08:47] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 08:08:51,138 [ERROR] Erreur Freebox /downloads: 'result'
+2025-12-26 08:08:51,147 [INFO] 192.168.0.3 - - [26/Dec/2025 08:08:51] "[35m[1mGET /category/downloads HTTP/1.1[0m" 500 -
+2025-12-26 08:09:05,184 [INFO] 192.168.0.3 - - [26/Dec/2025 08:09:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-26 08:09:05,235 [INFO] 192.168.0.3 - - [26/Dec/2025 08:09:05] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 08:09:12,620 [ERROR] Erreur Freebox /downloads: 'result'
+2025-12-26 08:09:12,633 [INFO] 192.168.0.3 - - [26/Dec/2025 08:09:12] "[35m[1mGET /category/downloads HTTP/1.1[0m" 500 -
+2025-12-26 08:10:04,303 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 08:10:04,317 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 08:10:20,644 [INFO] 192.168.0.3 - - [26/Dec/2025 08:10:20] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 08:10:25,592 [INFO] Session Freebox ouverte
+2025-12-26 08:10:25,649 [ERROR] Erreur Freebox /downloads: 'result'
+2025-12-26 08:10:25,691 [INFO] 192.168.0.3 - - [26/Dec/2025 08:10:25] "[35m[1mGET /category/downloads HTTP/1.1[0m" 500 -
+2025-12-26 08:10:49,273 [INFO] 192.168.0.3 - - [26/Dec/2025 08:10:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-26 08:10:49,486 [INFO] 192.168.0.3 - - [26/Dec/2025 08:10:49] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 08:10:56,539 [ERROR] Erreur Freebox /downloads: 'result'
+2025-12-26 08:10:56,553 [INFO] 192.168.0.3 - - [26/Dec/2025 08:10:56] "[35m[1mGET /category/downloads HTTP/1.1[0m" 500 -
+2025-12-26 08:12:14,338 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 08:12:14,358 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 08:12:19,955 [INFO] 192.168.0.3 - - [26/Dec/2025 08:12:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-26 08:12:20,271 [INFO] 192.168.0.3 - - [26/Dec/2025 08:12:20] "GET /dashboard HTTP/1.1" 200 -
+2025-12-26 08:12:23,549 [INFO] Session Freebox ouverte
+2025-12-26 08:12:23,625 [INFO] 192.168.0.3 - - [26/Dec/2025 08:12:23] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-26 08:14:58,403 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 08:14:58,526 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 08:15:04,208 [INFO] Session Freebox ouverte
+2025-12-26 08:15:04,359 [ERROR] Erreur Freebox /downloads: 'result'
+2025-12-26 08:15:04,398 [INFO] 192.168.0.3 - - [26/Dec/2025 08:15:04] "[35m[1mGET /category/downloads HTTP/1.1[0m" 500 -
+2025-12-26 08:16:56,381 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 08:16:56,432 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 08:17:01,279 [INFO] Session Freebox ouverte
+2025-12-26 08:17:01,340 [INFO] 192.168.0.3 - - [26/Dec/2025 08:17:01] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-26 08:17:47,235 [INFO] 192.168.0.3 - - [26/Dec/2025 08:17:47] "GET /category/downloads HTTP/1.1" 200 -
+2025-12-26 08:21:28,792 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-12-26 08:21:28,795 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-26 08:21:33,998 [INFO] Session Freebox ouverte
+2025-12-26 08:21:34,091 [INFO] 192.168.0.3 - - [26/Dec/2025 08:21:34] "GET /category/downloads HTTP/1.1" 200 -

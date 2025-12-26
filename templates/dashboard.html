@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Freebox Dashboard</h1>
+
+        <div class="buttons">
+            {% for name, url, icon in buttons %}
+            <button onclick="window.location='{{ url }}'">{{ icon }} {{ name }}</button>
+            {% endfor %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connexion</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <form method="post" class="login-box">
+            <h2>Connexion Freebox</h2>
+            <input name="username" placeholder="Utilisateur">
+            <input name="password" type="password" placeholder="Mot de passe">
+            <button>Se connecter</button>
+        </form>
+    </body>
+</html>

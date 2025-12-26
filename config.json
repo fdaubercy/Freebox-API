@@ -1,0 +1,9 @@
+{
+  "freebox_url": "http://mafreebox.freebox.fr",
+  "api_version": "v15",
+  "app_id": "fr.freebox.webapp",
+  "jwt_secret": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJleHAiOjE3NjY2OTQ3NTd9.kwjfn89YgyuNFiCEcvwy7NIlpxWatxB02gg0AqTqQg4",
+  "jwt_exp": 3600,
+  "local_user": "admin",
+  "local_password": "admin"
+}

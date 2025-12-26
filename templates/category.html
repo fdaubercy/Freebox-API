@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h2>{{ title }}</h2>
+        <div id='json' style="display:none;">{{ jsonString }}</div>
+
+        <table>
+            <tr>
+                {% for k in data["result"].keys() %}
+                <th>{{ k }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for v in data["result"].values() %}
+                <td>{{ v | tojson }}</td>
+                {% endfor %}
+            </tr>
+        </table>
+
+        <button onclick="window.location='/dashboard'">⬅ Retour</button>
+    </body>
+</html>
