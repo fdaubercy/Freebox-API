@@ -1220,3 +1220,74 @@ AttributeError: module 'requests' has no attribute 'hmac'
 2025-12-26 12:40:19,646 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 12:40:49 CET)" (scheduled at 2025-12-26 12:40:19.634575+01:00)
 2025-12-26 12:40:19,722 [INFO] Poll status OK ↓2.53 ↑0.02
 2025-12-26 12:40:19,723 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 12:40:49 CET)" executed successfully
+2025-12-26 19:36:57,925 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:36:57,926 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:36:57,928 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:36:57,931 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 19:36:57,931 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 19:36:57,932 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 19:36:57,933 [INFO] Scheduler started
+2025-12-26 19:36:57,935 [INFO] Scheduler Freebox démarré
+2025-12-26 19:42:36,899 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:42:36,900 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:42:36,901 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:42:36,904 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 19:42:36,904 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 19:42:36,905 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 19:42:36,907 [INFO] Scheduler started
+2025-12-26 19:42:36,919 [INFO] Scheduler Freebox démarré
+2025-12-26 19:43:06,901 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:43:06 CET)" (scheduled at 2025-12-26 19:43:06.899028+01:00)
+2025-12-26 19:43:07,048 [INFO] 🔐 Session Freebox établie
+2025-12-26 19:43:07,104 [INFO] Poll status OK ↓4.16 ↑0.08
+2025-12-26 19:43:07,110 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:43:36 CET)" executed successfully
+2025-12-26 19:43:16,575 [INFO] Client WebSocket connecté
+2025-12-26 19:43:36,919 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:44:06 CET)" (scheduled at 2025-12-26 19:43:36.899028+01:00)
+2025-12-26 19:43:37,022 [INFO] Poll status OK ↓2.81 ↑0.07
+2025-12-26 19:43:37,026 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:44:06 CET)" executed successfully
+2025-12-26 19:43:47,711 [INFO] Client WebSocket connecté
+2025-12-26 19:44:06,911 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:44:36 CET)" (scheduled at 2025-12-26 19:44:06.899028+01:00)
+2025-12-26 19:44:06,991 [INFO] Poll status OK ↓2.01 ↑0.06
+2025-12-26 19:44:07,001 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:44:36 CET)" executed successfully
+2025-12-26 19:44:34,021 [INFO] Client WebSocket connecté
+2025-12-26 19:44:36,908 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:45:06 CET)" (scheduled at 2025-12-26 19:44:36.899028+01:00)
+2025-12-26 19:44:37,016 [INFO] Poll status OK ↓5.20 ↑0.08
+2025-12-26 19:44:37,032 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:45:06 CET)" executed successfully
+2025-12-26 19:45:06,904 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:45:36 CET)" (scheduled at 2025-12-26 19:45:06.899028+01:00)
+2025-12-26 19:45:06,991 [INFO] Poll status OK ↓3.39 ↑0.06
+2025-12-26 19:45:06,992 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:45:36 CET)" executed successfully
+2025-12-26 19:45:21,007 [INFO] Client WebSocket connecté
+2025-12-26 19:45:36,901 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:46:06 CET)" (scheduled at 2025-12-26 19:45:36.899028+01:00)
+2025-12-26 19:45:36,962 [INFO] Poll status OK ↓3.73 ↑0.07
+2025-12-26 19:45:36,963 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:46:06 CET)" executed successfully
+2025-12-26 19:46:06,910 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:46:36 CET)" (scheduled at 2025-12-26 19:46:06.899028+01:00)
+2025-12-26 19:46:06,975 [INFO] Poll status OK ↓4.77 ↑0.08
+2025-12-26 19:46:06,988 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:46:36 CET)" executed successfully
+2025-12-26 19:46:07,999 [INFO] Client WebSocket connecté
+2025-12-26 19:46:36,901 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:47:06 CET)" (scheduled at 2025-12-26 19:46:36.899028+01:00)
+2025-12-26 19:46:36,984 [INFO] Poll status OK ↓3.36 ↑0.09
+2025-12-26 19:46:36,984 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:47:06 CET)" executed successfully
+2025-12-26 19:47:06,903 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:47:36 CET)" (scheduled at 2025-12-26 19:47:06.899028+01:00)
+2025-12-26 19:47:07,011 [INFO] Poll status OK ↓10.66 ↑0.17
+2025-12-26 19:47:07,012 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:47:36 CET)" executed successfully
+2025-12-26 19:47:12,505 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:47:12,506 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:47:12,507 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-12-26 19:47:12,509 [INFO] Added job "poll_status" to job store "default"
+2025-12-26 19:47:12,509 [INFO] Added job "poll_wifi" to job store "default"
+2025-12-26 19:47:12,510 [INFO] Added job "poll_dhcp" to job store "default"
+2025-12-26 19:47:12,510 [INFO] Scheduler started
+2025-12-26 19:47:12,512 [INFO] Scheduler Freebox démarré
+2025-12-26 19:47:20,375 [INFO] Client WebSocket connecté
+2025-12-26 19:47:25,550 [INFO] Client WebSocket connecté
+2025-12-26 19:47:36,901 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:48:06 CET)" (scheduled at 2025-12-26 19:47:36.899028+01:00)
+2025-12-26 19:47:36,902 [INFO] Running job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 19:52:36 CET)" (scheduled at 2025-12-26 19:47:36.900147+01:00)
+2025-12-26 19:47:36,903 [INFO] Running job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 19:47:36 CET)" (scheduled at 2025-12-26 19:47:36.901094+01:00)
+2025-12-26 19:47:36,970 [INFO] Poll status OK ↓2.57 ↑0.06
+2025-12-26 19:47:36,971 [INFO] Poll DHCP OK
+2025-12-26 19:47:36,971 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:48:06 CET)" executed successfully
+2025-12-26 19:47:36,972 [INFO] Job "poll_dhcp (trigger: interval[0:05:00], next run at: 2025-12-26 19:52:36 CET)" executed successfully
+2025-12-26 19:47:36,973 [INFO] Poll WiFi OK
+2025-12-26 19:47:36,974 [INFO] Job "poll_wifi (trigger: interval[0:05:00], next run at: 2025-12-26 19:52:36 CET)" executed successfully
+2025-12-26 19:48:06,912 [INFO] Running job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:48:36 CET)" (scheduled at 2025-12-26 19:48:06.899028+01:00)
+2025-12-26 19:48:06,943 [INFO] Poll status OK ↓2.53 ↑0.08
+2025-12-26 19:48:06,945 [INFO] Job "poll_status (trigger: interval[0:00:30], next run at: 2025-12-26 19:48:36 CET)" executed successfully
